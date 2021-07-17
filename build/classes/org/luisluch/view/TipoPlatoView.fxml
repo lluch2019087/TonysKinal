@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="765.0" stylesheets="@../resource/Empresa.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisluch.controller.TipoPlatoController">
+   <children>
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="229.0" layoutY="204.0" prefHeight="31.0" prefWidth="495.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfaeae" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCodigoTipoPlato" editable="false" layoutX="229.0" layoutY="156.0" prefHeight="31.0" prefWidth="495.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblTipoPlatos" layoutX="37.0" layoutY="270.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="224.0" prefWidth="692.0">
+         <columns>
+            <TableColumn fx:id="colCodigoTipoPlato" editable="false" prefWidth="173.0" resizable="false" sortable="false" text="CodigoTipoPlato" />
+            <TableColumn fx:id="colDescripcion" editable="false" prefWidth="508.0" resizable="false" sortable="false" text="Descripción" />
+         </columns>
+         <effect>
+            <InnerShadow color="#0d0d0d" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="41.0" layoutY="505.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="67.0" prefWidth="140.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.25" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="403.0" layoutY="505.0" mnemonicParsing="false" onAction="#editar" prefHeight="67.0" prefWidth="140.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.33" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="218.0" layoutY="505.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="67.0" prefWidth="140.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.29" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="582.0" layoutY="505.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="140.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="78.0" layoutY="158.0" prefHeight="27.0" prefWidth="130.0" text="Codigo TipoPlato :">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="98.0" layoutY="205.0" prefHeight="31.0" prefWidth="111.0" text="Descripción :">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="271.0" layoutY="38.0" prefHeight="54.0" prefWidth="223.0" text="Tipo Platos" textAlignment="CENTER" textFill="#686868">
+         <font>
+            <Font name="Garamond" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="652.0" layoutY="585.0" opacity="0.86" prefHeight="27.0" prefWidth="103.0" style="-fx-text-fill: #000000;" text="Tony´s KINAL">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="224.0" layoutY="37.0" prefHeight="16.0" prefWidth="300.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#908484" />
+         </effect>
+      </Separator>
+      <Separator layoutX="226.0" layoutY="86.0" prefHeight="16.0" prefWidth="300.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#867f7f" />
+         </effect>
+      </Separator>
+      <Separator layoutX="72.0" layoutY="181.0" prefHeight="16.0" prefWidth="140.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#a89e9e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="95.0" layoutY="228.0" prefHeight="16.0" prefWidth="111.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5a9a9" />
+         </effect>
+      </Separator>
+      <Button fx:id="idTipoEmpleados" layoutX="26.0" layoutY="43.0" mnemonicParsing="false" onMouseClicked="#menuPrincipal" prefHeight="27.0" prefWidth="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idEmpresa" fitHeight="48.0" fitWidth="28.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/volver2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="idplato" layoutX="649.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#ventanaPlato" prefHeight="54.0" prefWidth="75.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idPlato" fitHeight="43.0" fitWidth="65.0" onMouseClicked="#ventanaPlato" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/cena.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <SepiaTone level="0.04" />
+   </effect>
+</AnchorPane>

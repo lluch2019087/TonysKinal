@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReportePresupuesto" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="db4177c6-c622-419c-8b96-613b12daab82">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte2($P{codEmpresa});]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPresupuesto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaSolicitud" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadPresupuesto" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="179" height="30" forecolor="#009999" uuid="44dfadfd-800e-4f97-95c9-45594b8317d6"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fecha de Solicitud:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="202" height="30" forecolor="#009999" uuid="94f1dda8-a53d-41ea-8517-af739cb2df18"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cantidad de presupuesto:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="189" y="0" width="122" height="20" forecolor="#999999" uuid="4af00a32-7599-4091-8ff6-cc1b81e6c439"/>
+				<textElement>
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaSolicitud}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="624" y="0" width="113" height="20" forecolor="#999999" uuid="98e00ed9-48cd-4e89-944a-0dd07bf4727f"/>
+				<textElement>
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidadPresupuesto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="771.0" stylesheets="@../resource/Empresa.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisluch.controller.EmpresaController">
+   <children>
+      <TextField fx:id="txtNombreEmpresa" editable="false" layoutX="223.0" layoutY="145.0" prefHeight="31.0" prefWidth="384.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfaeae" />
+         </effect></TextField>
+      <TextField fx:id="txtDireccionEmpresa" editable="false" layoutX="223.0" layoutY="196.0" prefHeight="31.0" prefWidth="384.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfa4a4" />
+         </effect></TextField>
+      <TextField fx:id="txtTelefono" editable="false" layoutX="223.0" layoutY="240.0" prefHeight="31.0" prefWidth="384.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b9a1a1" />
+         </effect></TextField>
+      <TextField fx:id="txtCodigoEmpresa" editable="false" layoutX="223.0" layoutY="97.0" prefHeight="31.0" prefWidth="384.0">
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <TableView fx:id="tblEmpresas" layoutX="38.0" layoutY="289.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="224.0" prefWidth="692.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpresa" editable="false" prefWidth="178.0" text="Codigo Empresa" />
+            <TableColumn fx:id="colNombreEmpresa" editable="false" prefWidth="169.0" text="Nombre Empresa" />
+          <TableColumn fx:id="colDirrecionEmpresa" editable="false" prefWidth="214.0" text="Dirección Empresa" />
+            <TableColumn fx:id="colTelefono" editable="false" prefWidth="140.0" text="Teléfono " />
+        </columns>
+         <effect>
+            <InnerShadow color="#0d0d0d" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="41.0" layoutY="531.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="67.0" prefWidth="140.0" text="Nuevo">
+         <effect>
+            <Reflection fraction="0.25" topOpacity="0.3" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font></Button>
+      <Button fx:id="btnEditar" layoutX="403.0" layoutY="531.0" mnemonicParsing="false" onAction="#editar" prefHeight="67.0" prefWidth="140.0" text="Editar">
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.33" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font></Button>
+      <Button fx:id="btnEliminar" layoutX="216.0" layoutY="531.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="67.0" prefWidth="140.0" text="Eliminar">
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.29" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font></Button>
+      <Button fx:id="btnReporte" layoutX="584.0" layoutY="531.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="67.0" prefWidth="140.0" text="Reporte">
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.3" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font></Button>
+      <Label layoutX="46.0" layoutY="99.0" prefHeight="27.0" prefWidth="158.0" text="Codigo Empresa :">
+         <font>
+            <Font name="Bodoni MT" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="146.0" prefHeight="31.0" prefWidth="165.0" text="Nombre Empresa :">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="198.0" prefHeight="27.0" prefWidth="165.0" text="Dirección Empresa:" textFill="#eeeeee">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font></Label>
+      <Label layoutX="121.0" layoutY="242.0" prefHeight="31.0" prefWidth="92.0" text="Teléfono :">
+         <font>
+            <Font name="Bodoni MT" size="21.0" />
+         </font></Label>
+      <Label layoutX="299.0" layoutY="17.0" prefHeight="54.0" prefWidth="188.0" text="Empresas" textAlignment="CENTER" textFill="#686868">
+         <font>
+            <Font name="Garamond" size="46.0" />
+         </font></Label>
+      <Label layoutX="654.0" layoutY="599.0" opacity="0.86" prefHeight="27.0" prefWidth="103.0" style="-fx-text-fill: #000000;" text="Tony´s KINAL">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="284.0" layoutY="14.0" prefHeight="16.0" prefWidth="200.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#726e6e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="286.0" layoutY="63.0" prefHeight="16.0" prefWidth="200.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#726e6e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="41.0" layoutY="122.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#979191" />
+         </effect>
+      </Separator>
+      <Separator layoutX="41.0" layoutY="169.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#979191" />
+         </effect>
+      </Separator>
+      <Separator layoutX="41.0" layoutY="220.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b2a3a3" />
+         </effect>
+      </Separator>
+      <Separator layoutX="119.0" layoutY="265.0" prefHeight="16.0" prefWidth="92.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <Button fx:id="idEmpresas" layoutX="13.0" layoutY="23.0" mnemonicParsing="false" onMouseClicked="#menuPrincipal" prefHeight="27.0" prefWidth="36.0">
+         <graphic>
+            <ImageView fx:id="idEmpresa" fitHeight="48.0" fitWidth="28.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/volver2.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="675.0" layoutY="22.0" mnemonicParsing="false" onMouseClicked="#ventanaPresupuestos" prefHeight="54.0" prefWidth="76.0">
+         <graphic>
+            <ImageView fx:id="idPresupuestos" fitHeight="40.0" fitWidth="50.0" onMouseClicked="#ventanaPresupuestos" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/money%20(2).png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Reflection fraction="0.49" topOpacity="0.34" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="675.0" layoutY="86.0" mnemonicParsing="false" onKeyReleased="#ventanaServicios" onMouseClicked="#ventanaServicios" prefHeight="54.0" prefWidth="76.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.49" topOpacity="0.34" />
+         </effect>
+         <graphic>
+            <ImageView fx:id="idPresupuestos1" fitHeight="40.0" fitWidth="50.0" onMouseClicked="#ventanaServicios" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/entregar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <SepiaTone level="0.04" />
+   </effect>
+</AnchorPane>

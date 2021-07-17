@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuestoFinal" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="40ee461e-f0f3-4d71-a4b2-d80ebaff3797">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte3($P{codEmpresa});]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="572" uuid="1a3b7627-b01b-4ab5-a7f6-fd602719327c"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\2aa8ffa38f20ba0fc7759474a6844f590.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="-2" width="752" height="79" uuid="c78d917d-4842-4195-b877-05d2497dc602"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\ki.PNG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="698" y="20" width="54" height="59" uuid="597163c5-9890-4e57-ab5e-d8fc5ba85bd3"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\Icono1.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="708" y="0" width="44" height="20" uuid="7bbac37e-fa17-422c-8fa4-74b6257162ca"/>
+				<textElement>
+					<font fontName="Forte" size="12"/>
+				</textElement>
+				<text><![CDATA[2019087]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-2" width="88" height="67" uuid="878656b4-dc4c-42da-9fdf-ef2fd86e3eca"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\money (2).png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="118" y="20" width="291" height="45" forecolor="#333333" uuid="f0d94c78-e156-46da-a1cb-2bccfbc94f01"/>
+				<textElement>
+					<font fontName="Californian FB" size="30"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="153" splitType="Stretch">
+			<textField>
+				<reportElement x="189" y="97" width="151" height="30" forecolor="#999999" backcolor="#FFFFFF" uuid="1396e2e0-cf34-4ffe-a1c0-6ba178c0fc0a"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="189" y="127" width="136" height="24" forecolor="#999999" backcolor="#FFFFFF" uuid="7b379412-befe-4b00-a890-606f1a785c37"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="97" width="100" height="30" forecolor="#999999" backcolor="#FFFFFF" uuid="9cedc368-230a-4a53-af7d-299ff3997d00"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="-21" y="127" width="773" height="24" backcolor="#FFFFFF" uuid="0b409dd8-d57d-4417-8b99-34760c83f109"/>
+				<subreportParameter name="codEmpresa">
+					<subreportParameterExpression><![CDATA[$P{codEmpresa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportePresupuesto.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="0" y="73" width="189" height="30" forecolor="#219797" uuid="c4d4e584-494f-45c0-9e90-abde3408288f"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre de la Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="409" y="73" width="190" height="40" forecolor="#219797" uuid="87ae0881-c7f6-47b0-a4e0-fb67140f9455"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Número de la Empresa:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="237" y="12" width="296" height="1" forecolor="#000000" uuid="3dd7ed0a-55b1-4944-8318-1d29ac9ea98c"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="247" y="54" width="275" height="1" forecolor="#000000" uuid="81498f36-b7c6-4a63-8b92-68696687d648"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="247" y="12" width="275" height="42" forecolor="#999999" uuid="b9ebc017-27fe-4b03-b142-84417f0b05dc"/>
+				<textElement>
+					<font fontName="Cambria Math" size="26" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Presupuesto]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="133" height="22" forecolor="#009999" uuid="aedd0c10-5866-46b0-8dc6-3416aced1e50"/>
+				<textElement>
+					<font fontName="Dialog" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Fecha Solicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="0" width="127" height="22" forecolor="#009999" uuid="5d9c2648-6b88-406d-8ab0-1bcd8e61cd1b"/>
+				<textElement>
+					<font fontName="Dialog" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tipo de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="297" y="0" width="129" height="22" forecolor="#009999" uuid="cae76f51-e578-479d-b659-ecf4b3c7396f"/>
+				<textElement>
+					<font fontName="Dialog" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hora de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="0" width="137" height="22" forecolor="#009999" uuid="4e826d8a-3fba-4e32-8b69-5bcf292457ee"/>
+				<textElement>
+					<font fontName="Dialog" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Lugar de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="614" y="0" width="138" height="22" forecolor="#009999" uuid="772bdf62-1bd9-4541-b823-0d8527d77f4d"/>
+				<textElement>
+					<font fontName="Dialog" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono contacto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="26" y="0" width="92" height="20" forecolor="#999999" backcolor="#FFFFFF" uuid="a932dd6a-9e6d-4e85-98e5-4cc8d7fe571c"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH.mm">
+				<reportElement x="325" y="0" width="73" height="20" forecolor="#999999" backcolor="#FFFFFF" uuid="717d8b05-3317-4842-b5d3-0d3e6eb35753"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="644" y="0" width="83" height="20" forecolor="#999999" backcolor="#FFFFFF" uuid="2b78b361-4a4f-4447-a4cc-6756b11f75b4"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="30" width="749" height="1" forecolor="#666666" uuid="c86333ae-dc80-4c62-90d7-f04f5e016732"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="487" y="0" width="99" height="20" forecolor="#999999" backcolor="#FFFFFF" uuid="95c680ce-7b18-4b8c-b9b2-51b1906e35bf"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="171" y="0" width="76" height="20" forecolor="#999999" backcolor="#FFFFFF" uuid="ec71398b-0ed8-487c-932d-8bbd1425db22"/>
+				<textElement>
+					<font fontName="SansSerif" size="14" isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="752" height="54" uuid="658f78ac-0f61-472d-a11b-358a931d57dd"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\ko.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="510" y="31" width="242" height="23" forecolor="#333333" uuid="5a0ee948-8aaa-4ae4-9ef0-d73132dd06fb"/>
+				<textElement>
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<text><![CDATA[Si un día sientes un vacío, come, es hambre.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="100" height="25" uuid="43fe8a72-89ed-4f6f-ad84-2509f0b0fc5b"/>
+				<textElement>
+					<font fontName="Forte" size="14"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="765.0" stylesheets="@../resource/Empresa.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisluch.controller.Productos_has_PlatosController">
+   <children>
+      <TableView fx:id="tblProductosPlatos" layoutX="37.0" layoutY="245.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="249.0" prefWidth="692.0">
+         <columns>
+            <TableColumn fx:id="colCodigoProducto" editable="false" prefWidth="353.0" resizable="false" sortable="false" text="Código Producto" />
+            <TableColumn fx:id="colCodigoPlato" editable="false" prefWidth="326.0" resizable="false" sortable="false" text="Código Plato" />
+         </columns>
+         <effect>
+            <InnerShadow color="#0d0d0d" />
+         </effect>
+      </TableView>
+      <Label layoutX="233.0" layoutY="38.0" prefHeight="54.0" prefWidth="294.0" text="Productos_has_Platos" textAlignment="CENTER" textFill="#686868">
+         <font>
+            <Font name="Garamond" size="33.0" />
+         </font>
+      </Label>
+      <Label layoutX="649.0" layoutY="527.0" opacity="0.86" prefHeight="27.0" prefWidth="103.0" style="-fx-text-fill: #000000;" text="Tony´s KINAL">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="224.0" layoutY="37.0" prefHeight="16.0" prefWidth="300.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#908484" />
+         </effect>
+      </Separator>
+      <Separator layoutX="227.0" layoutY="81.0" prefHeight="16.0" prefWidth="300.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#867f7f" />
+         </effect>
+      </Separator>
+      <Button fx:id="idTipoEmpleados" layoutX="26.0" layoutY="43.0" mnemonicParsing="false" onMouseClicked="#menuPrincipal" prefHeight="27.0" prefWidth="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idEmpresa" fitHeight="48.0" fitWidth="28.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/volver2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="idplato" layoutX="649.0" layoutY="32.0" mnemonicParsing="false" onMouseClicked="#ventanaPlato" prefHeight="54.0" prefWidth="75.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idPlato" fitHeight="43.0" fitWidth="65.0" onMouseClicked="#ventanaPlato" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/cena.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="102.0" layoutY="131.0" prefHeight="27.0" prefWidth="140.0" text="Código Producto :">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="103.0" layoutY="154.0" prefHeight="16.0" prefWidth="132.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <ComboBox fx:id="cmbCodigoProducto" layoutX="260.0" layoutY="129.0" prefHeight="31.0" prefWidth="267.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#f2ebeb" />
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+      <Label layoutX="130.0" layoutY="190.0" prefHeight="27.0" prefWidth="115.0" text="Código Plato :">
+         <font>
+            <Font name="Bodoni MT" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="126.0" layoutY="213.0" prefHeight="16.0" prefWidth="109.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="260.0" layoutY="188.0" prefHeight="31.0" prefWidth="267.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#f2ebeb" />
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+      <Button fx:id="idplato1" layoutX="649.0" layoutY="113.0" mnemonicParsing="false" onMouseClicked="#ventanaProducto" prefHeight="54.0" prefWidth="75.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idPlato1" fitHeight="43.0" fitWidth="65.0" onMouseClicked="#ventanaProducto" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/product.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <effect>
+      <SepiaTone level="0.04" />
+   </effect>
+</AnchorPane>

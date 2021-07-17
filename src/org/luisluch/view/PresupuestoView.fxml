@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="626.0" prefWidth="771.0" stylesheets="@../resource/Empresa.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisluch.controller.PresupuestoController">
+   <children>
+      <Label layoutX="40.0" layoutY="95.0" prefHeight="26.0" prefWidth="191.0" text="Codigo Presupuesto :">
+         <font>
+            <Font name="Bodoni MT" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="198.0" prefHeight="26.0" prefWidth="152.0" text="Fecha Solicitud :">
+         <font>
+            <Font name="Bodoni MT" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="141.0" prefHeight="26.0" prefWidth="206.0" text="Cantidad Presupuesto :">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="74.0" layoutY="240.0" prefHeight="26.0" prefWidth="162.0" text="Codigo Empresa :">
+         <font>
+            <Font name="Bodoni MT" size="21.0" />
+         </font>
+      </Label>
+      <Separator layoutX="31.0" layoutY="162.0" prefHeight="16.0" prefWidth="206.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b2a3a3" />
+         </effect>
+      </Separator>
+      <Separator layoutX="43.0" layoutY="113.0" prefHeight="16.0" prefWidth="182.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#979191" />
+         </effect>
+      </Separator>
+      <Label layoutX="277.0" layoutY="17.0" prefHeight="54.0" prefWidth="247.0" text="Presupuestos" textAlignment="CENTER" textFill="#686868">
+         <font>
+            <Font name="Garamond" size="46.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReporte" layoutX="582.0" layoutY="531.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="67.0" prefWidth="144.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="236.0" layoutY="531.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="67.0" prefWidth="144.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.29" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="408.0" layoutY="531.0" mnemonicParsing="false" onAction="#editar" prefHeight="67.0" prefWidth="144.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.33" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="57.0" layoutY="531.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="67.0" prefWidth="144.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.25" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="654.0" layoutY="599.0" opacity="0.86" prefHeight="27.0" prefWidth="103.0" style="-fx-text-fill: #000000;" text="Tony´s KINAL">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="271.0" layoutY="63.0" prefHeight="16.0" prefWidth="247.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#726e6e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="269.0" layoutY="14.0" prefHeight="16.0" prefWidth="247.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#726e6e" />
+         </effect>
+      </Separator>
+      <TableView fx:id="tblPresupuestos" layoutX="51.0" layoutY="285.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="224.0" prefWidth="684.0" stylesheets="@../resource/Empresa.css">
+         <columns>
+            <TableColumn fx:id="colCodigoPresupuesto" editable="false" prefWidth="178.0" text="Codigo Presupuesto " />
+            <TableColumn fx:id="colFechaSolicitud" editable="false" prefWidth="155.0" text="Fecha Solicitud " />
+            <TableColumn fx:id="colCantidadPresupuesto" editable="false" prefWidth="196.0" text="Cantidad Presupuesto " />
+            <TableColumn fx:id="colCodigoEmpresa" editable="false" prefWidth="172.0" text="Codigo Empresa " />
+         </columns>
+         <effect>
+            <InnerShadow color="#0d0d0d" />
+         </effect>
+      </TableView>
+      <TextField fx:id="txtCodigoPresupuesto" editable="false" layoutX="258.0" layoutY="95.0" prefHeight="31.0" prefWidth="368.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCantidadPresupuesto" editable="false" layoutX="258.0" layoutY="147.0" prefHeight="31.0" prefWidth="368.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfa4a4" />
+         </effect>
+      </TextField>
+      <Button fx:id="idPresupuesto" layoutX="23.0" layoutY="25.0" mnemonicParsing="false" onMouseClicked="#ventanaEmpresas" prefHeight="27.0" prefWidth="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idPresupuesto" fitHeight="48.0" fitWidth="28.0" onMouseClicked="#ventanaEmpresas" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/volver2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutX="77.0" layoutY="226.0" prefHeight="16.0" prefWidth="152.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <Separator layoutX="77.0" layoutY="265.0" prefHeight="16.0" prefWidth="152.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <GridPane fx:id="grpFechaSolicitud" layoutX="259.0" layoutY="196.0" prefHeight="30.0" prefWidth="214.0" stylesheets="@../resource/DatePicker.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <ComboBox fx:id="cmbCodigoEmpresa" layoutX="261.0" layoutY="238.0" prefHeight="31.0" prefWidth="239.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#f2ebeb" />
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+   </children>
+</AnchorPane>

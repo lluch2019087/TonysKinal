@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReporteFinal" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3043985f-03db-4a59-9c8d-be7c256243da">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte7($P{codServicio});]]>
+	</queryString>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="190" height="22" forecolor="#219797" uuid="31f793e3-1e48-4c01-8b29-32d29f54ec9b"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre del Producto :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="172" y="0" width="141" height="20" forecolor="#999999" uuid="50114de9-2e5b-4b0a-8bf9-09726bc836d3"/>
+				<textElement>
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="90" y="25" width="223" height="1" forecolor="#666666" uuid="257e5e4e-95fc-4cf5-8944-d4009cc07ab7"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

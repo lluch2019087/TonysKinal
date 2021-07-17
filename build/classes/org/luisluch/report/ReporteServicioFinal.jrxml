@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicioFinal" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2397fa17-bbf5-47cd-81c7-5bdbd6b558a7">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarReporte1($P{codServicio});]]>
+	</queryString>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="572" uuid="c236d265-6cbf-4761-ab2a-47d8bd4620ce"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\2aa8ffa38f20ba0fc7759474a6844f590.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="752" height="79" uuid="6023bba7-5140-440b-84a6-a4eed5de007c"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\ki.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="708" y="0" width="44" height="20" uuid="d0fc5dcc-1bc8-4184-8c76-f237dd88b215"/>
+				<textElement>
+					<font fontName="Forte" size="12"/>
+				</textElement>
+				<text><![CDATA[2019087]]></text>
+			</staticText>
+			<image>
+				<reportElement x="698" y="20" width="54" height="59" uuid="65fe0932-270f-434b-a2d2-436ce39227bf"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\Icono1.PNG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="88" height="67" uuid="9f98e3a7-7272-40bd-a701-125c4800cf74"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\money (2).png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="155" y="32" width="291" height="45" forecolor="#333333" uuid="e6a5b208-5895-4038-b539-11d3aa80f156"/>
+				<textElement>
+					<font fontName="Californian FB" size="30"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="273" y="7" width="237" height="37" forecolor="#999999" uuid="d0ef0af1-da78-44c7-b3c2-c0f6c290b76c"/>
+				<textElement>
+					<font fontName="Cambria Math" size="26" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="244" y="7" width="296" height="1" forecolor="#999999" uuid="8db823a8-48f9-413f-8d27-e6c7e78500db"/>
+				<graphicElement>
+					<pen lineWidth="3.5" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="255" y="43" width="275" height="1" forecolor="#000000" uuid="11e6cd84-eedd-44fb-b223-e1f245c89420"/>
+				<graphicElement>
+					<pen lineWidth="1.75"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<textField>
+				<reportElement x="173" y="41" width="100" height="20" forecolor="#999999" uuid="57699476-1bcb-4091-8b3a-391d8225e399"/>
+				<textElement>
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="550" y="41" width="132" height="20" forecolor="#999999" uuid="6672eba1-5f74-4975-a86f-fb8f71112a39"/>
+				<textElement>
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="11" width="143" height="40" forecolor="#219797" uuid="fe8332cf-11a0-4d2f-bb71-39069a875174"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Tipo de Servicio :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="413" y="11" width="190" height="30" forecolor="#219797" uuid="baae40f8-dad9-4b9c-b0c3-c262182c30f2"/>
+				<textElement>
+					<font fontName="Dialog" size="16" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Descripción del Plato :]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="234" splitType="Stretch">
+			<subreport>
+				<reportElement x="-21" y="0" width="446" height="234" uuid="e379816f-80a3-4c83-9820-23309ec692b9"/>
+				<subreportParameter name="codServicio">
+					<subreportParameterExpression><![CDATA[$P{codServicio}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteFinal.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="466" y="23" width="137" height="22" forecolor="#009999" uuid="2d6f5589-1aa0-41ac-8dea-73316293aa25"/>
+				<textElement>
+					<font fontName="Dialog" size="15" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Plato:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="550" y="59" width="100" height="20" forecolor="#999999" uuid="ee4ce38b-e210-4eee-b8b3-c94f0cc376df"/>
+				<textElement>
+					<font size="14" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="752" height="54" uuid="0b203811-344e-4a52-a7f9-953d0e4c34e8"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\ko.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="510" y="31" width="242" height="23" forecolor="#333333" uuid="0dfdc83f-d346-4ee0-aa15-63252adcf496"/>
+				<textElement>
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<text><![CDATA[Si un día sientes un vacío, come, es hambre.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="29" width="100" height="25" uuid="769af360-8b2e-4f12-8c97-172ac436f884"/>
+				<textElement>
+					<font fontName="Forte" size="14"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

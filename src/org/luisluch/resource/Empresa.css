@@ -1,0 +1,37 @@
+
+AnchorPane{
+    -fx-background-color: #A7A294,
+    linear-gradient(#5F5F5F,#EDEDED);
+}
+
+.label{
+    
+  -fx-text-fill:#202325;
+}
+
+.table-view {
+    
+    -fx-base:#A9A9A9,
+    linear-gradient(#5F5F5F);
+    -fx-background-color:#F7F7F7;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+
+Button {
+    -fx-background-color: #AFAB9E
+        ,linear-gradient(#414141,#2C2C2C),
+        
+        linear-gradient(#5F5F5F,#695E6B);
+    -fx-text-fill:#CACED1;
+}
+
+.button:hover{
+    -fx-background-color:  linear-gradient(#9A8F9C,#2B272C);
+}

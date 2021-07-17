@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpresas" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="afcf9137-cf35-4147-a939-f7426bc3df60">
+	<property name="ireport.zoom" value="1.1"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[call sp_listarEmpresas]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="752" uuid="df2a0c9f-a1aa-42c2-91f6-072f76bd71ad"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\2aa8ffa38f20ba0fc7759474a6844f590.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="0" y="0" width="572" height="79" uuid="2f89f501-310e-4f2e-92b0-4357904bdaa2"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\ki.PNG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="62" height="64" uuid="ce4780f7-dd1e-4022-bcb9-17aed2649e22"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\shop.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="121" y="30" width="177" height="34" forecolor="#333333" uuid="088dd0c8-6211-4aea-ad52-84f686a4bf56"/>
+				<textElement>
+					<font fontName="Californian FB" size="24"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="0" width="44" height="20" uuid="951461e7-200f-4fbd-b676-f6f2ece140a0"/>
+				<textElement>
+					<font fontName="Forte" size="12"/>
+				</textElement>
+				<text><![CDATA[2019087]]></text>
+			</staticText>
+			<image>
+				<reportElement x="528" y="20" width="54" height="59" uuid="7babbf6f-568d-4760-9be0-3458e1524238"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\Icono1.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="162" y="10" width="245" height="35" forecolor="#999999" uuid="5564a65b-b22a-4fb5-9cf7-e4a68ed31598"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Cambria Math" size="26" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Reporte de Empresas]]></text>
+			</staticText>
+			<line>
+				<reportElement x="152" y="10" width="266" height="1" uuid="44e4fbc3-63ee-4af5-b433-35f9265a21cd"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="16" width="100" height="20" forecolor="#009999" uuid="27190759-31b0-4587-bf0b-e0ad7c16aabf"/>
+				<textElement>
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Código Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="16" width="100" height="20" forecolor="#009999" uuid="a4c3f0c2-681f-4968-a1c6-cc2f02603bd1"/>
+				<textElement>
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="16" width="82" height="20" forecolor="#009999" uuid="0f928ebf-11eb-4e8e-a5b9-01e8b874b151"/>
+				<textElement>
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="176" y="16" width="100" height="20" forecolor="#009999" uuid="b45c4389-db7f-4b4c-8cc8-22f16a5ad6f1"/>
+				<textElement>
+					<font fontName="Dialog" size="12" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa]]></text>
+			</staticText>
+			<line>
+				<reportElement x="162" y="0" width="245" height="1" uuid="fa10f150-6238-4391-b178-77f0e9a4817b"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="62" y="0" width="100" height="20" forecolor="#999999" uuid="dae2e51d-3ac6-43e3-aff3-9313900a0eee"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="100" height="20" forecolor="#999999" uuid="5ad995ce-bb8d-424c-9aeb-e4019d799b56"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="0" width="82" height="20" forecolor="#999999" uuid="edc8d975-2d2b-4c07-8962-a78f95094bbd"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="100" height="20" forecolor="#999999" uuid="c04014cb-18eb-4cb2-9440-b98d204a55d4"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="21" y="20" width="532" height="1" forecolor="#999999" uuid="e9f45782-ff91-4f5f-8a0d-e5c7927c8cba"/>
+				<graphicElement>
+					<pen lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="54" uuid="2555a91f-4843-48ae-9846-96293e0989c7"/>
+				<imageExpression><![CDATA["C:\\Users\\FAMILI. TELLE ALDANA\\Documents\\NetBeansProjects\\TonysKinal2019087\\src\\org\\luisluch\\image\\ko.PNG"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="330" y="31" width="242" height="23" forecolor="#333333" uuid="145f153f-cbd8-4158-a7d6-ef96262b10b7"/>
+				<textElement>
+					<font fontName="Segoe UI Symbol" size="12"/>
+				</textElement>
+				<text><![CDATA[Si un día sientes un vacío, come, es hambre.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="34" width="100" height="20" uuid="3ae6289d-1466-465e-864a-fc0477cd640b"/>
+				<textElement>
+					<font fontName="Forte"/>
+				</textElement>
+				<text><![CDATA[Tony´s KINAL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

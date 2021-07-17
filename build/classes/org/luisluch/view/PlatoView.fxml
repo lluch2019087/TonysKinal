@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="642.0" prefWidth="1199.0" stylesheets="@../resource/Empresa.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisluch.controller.PlatoController">
+   <children>
+      <TextField fx:id="txtCantidad" editable="false" layoutX="203.0" layoutY="157.0" prefHeight="31.0" prefWidth="388.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfaeae" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCodigoPlato" editable="false" layoutX="203.0" layoutY="109.0" prefHeight="31.0" prefWidth="388.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblPlatos" layoutX="34.0" layoutY="254.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="260.0" prefWidth="1131.0">
+         <columns>
+            <TableColumn fx:id="colCodigoPlato" editable="false" prefWidth="128.0" resizable="false" sortable="false" text="Codigo Plato" />
+            <TableColumn fx:id="colCantidad" editable="false" prefWidth="131.0" resizable="false" sortable="false" text="Cantidad" />
+            <TableColumn fx:id="colNombrePlato" editable="false" prefWidth="209.0" resizable="false" sortable="false" text="Nombre del Plato" />
+            <TableColumn fx:id="colDescripcion" editable="false" prefWidth="362.0" resizable="false" sortable="false" text="Descripción" />
+            <TableColumn fx:id="colPrecio" editable="false" prefWidth="153.0" resizable="false" sortable="false" text="Precio" />
+            <TableColumn fx:id="colCodigoTipoPlato" editable="false" minWidth="0.0" prefWidth="136.0" resizable="false" sortable="false" text="Codigo TipoPlato" />
+         </columns>
+         <effect>
+            <InnerShadow color="#0d0d0d" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="34.0" layoutY="536.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="78.0" prefWidth="178.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.25" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="511.0" layoutY="536.0" mnemonicParsing="false" onAction="#editar" prefHeight="78.0" prefWidth="178.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.33" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="279.0" layoutY="536.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="78.0" prefWidth="178.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.29" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="754.0" layoutY="539.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="178.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="71.0" layoutY="111.0" prefHeight="27.0" prefWidth="117.0" text="Codigo Plato :">
+         <font>
+            <Font name="Bodoni MT" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="157.0" prefHeight="31.0" prefWidth="89.0" text="Cantidad :">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="559.0" layoutY="30.0" prefHeight="54.0" prefWidth="131.0" text="Platos" textAlignment="CENTER" textFill="#686868">
+         <font>
+            <Font name="Garamond" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="1082.0" layoutY="603.0" opacity="0.86" prefHeight="27.0" prefWidth="103.0" style="-fx-text-fill: #000000;" text="Tony´s KINAL">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="547.0" layoutY="27.0" prefHeight="16.0" prefWidth="131.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#908484" />
+         </effect>
+      </Separator>
+      <Separator layoutX="547.0" layoutY="69.0" prefHeight="16.0" prefWidth="131.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#867f7f" />
+         </effect>
+      </Separator>
+      <Separator layoutX="69.0" layoutY="134.0" prefHeight="16.0" prefWidth="117.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#a89e9e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="99.0" layoutY="181.0" prefHeight="16.0" prefWidth="81.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5a9a9" />
+         </effect>
+      </Separator>
+      <Button layoutX="29.0" layoutY="36.0" mnemonicParsing="false" onMouseClicked="#ventanaTipoPlato" prefHeight="27.0" prefWidth="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="28.0" onMouseClicked="#ventanaTipoPlato" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/volver2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutX="55.0" layoutY="231.0" prefHeight="16.0" prefWidth="131.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#a89e9e" />
+         </effect>
+      </Separator>
+      <Label layoutX="57.0" layoutY="208.0" prefHeight="27.0" prefWidth="131.0" text="Nombre Del Plato :">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombrePlato" editable="false" layoutX="203.0" layoutY="206.0" prefHeight="31.0" prefWidth="388.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <Separator layoutX="635.0" layoutY="128.0" prefHeight="16.0" prefWidth="111.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#a89e9e" />
+         </effect>
+      </Separator>
+      <Label layoutX="637.0" layoutY="105.0" prefHeight="27.0" prefWidth="117.0" text="Descripción :">
+         <font>
+            <Font name="Bodoni MT" size="19.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="767.0" layoutY="109.0" prefHeight="31.0" prefWidth="388.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtPrecio" editable="false" layoutX="769.0" layoutY="157.0" prefHeight="31.0" prefWidth="388.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <Label layoutX="680.0" layoutY="153.0" prefHeight="27.0" prefWidth="67.0" text="Precio :">
+         <font>
+            <Font name="Bodoni MT" size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="673.0" layoutY="176.0" prefHeight="16.0" prefWidth="67.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#a89e9e" />
+         </effect>
+      </Separator>
+      <ComboBox fx:id="cmbCodigoTipoPlato" layoutX="767.0" layoutY="206.0" prefHeight="31.0" prefWidth="239.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#f2ebeb" />
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+      <Separator layoutX="618.0" layoutY="231.0" prefHeight="16.0" prefWidth="124.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <Label layoutX="618.0" layoutY="208.0" prefHeight="27.0" prefWidth="124.0" text="Codigo TipoPlato:">
+         <font>
+            <Font name="Bodoni MT" size="16.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <SepiaTone level="0.04" />
+   </effect>
+</AnchorPane>

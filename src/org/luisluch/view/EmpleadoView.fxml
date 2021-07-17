@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="687.0" prefWidth="1094.0" stylesheets="@../resource/Empresa.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.luisluch.controller.EmpleadoController">
+   <children>
+      <TextField fx:id="txtNumeroEmpleado" editable="false" layoutX="224.0" layoutY="142.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfaeae" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtApellidosEmpleado" editable="false" layoutX="224.0" layoutY="192.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#bfa4a4" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtDireccion" editable="false" layoutX="773.0" layoutY="89.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b9a1a1" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCodigoEmpleado" editable="false" layoutX="224.0" layoutY="93.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b5a3a3" />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblEmpleados" layoutX="13.0" layoutY="297.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="257.0" prefWidth="1067.0">
+         <columns>
+            <TableColumn fx:id="colCodigoEmpleado" editable="false" prefWidth="131.0" text="Codigo Empleado" />
+            <TableColumn fx:id="colNumeroEmpleado" editable="false" prefWidth="102.0" text="No.Empleado" />
+            <TableColumn fx:id="colApellidosEmpleado" editable="false" prefWidth="170.0" text="Apellidos" />
+            <TableColumn fx:id="colNombresEmpleado" editable="false" prefWidth="183.0" text="Nombres " />
+            <TableColumn fx:id="colDireccion" editable="false" prefWidth="95.0" text="Dirección" />
+            <TableColumn fx:id="colTelefono" editable="false" prefWidth="96.0" text="Teléfono" />
+            <TableColumn fx:id="colGradoCocinero" editable="false" prefWidth="116.0" text="Grado Cocinero" />
+            <TableColumn fx:id="colCodigoTipoEmpleado" editable="false" prefWidth="168.0" text="Codigo TipoEmpleado" />
+         </columns>
+         <effect>
+            <InnerShadow color="#0d0d0d" />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="172.0" layoutY="585.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="67.0" prefWidth="140.0" text="Nuevo">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.25" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="534.0" layoutY="585.0" mnemonicParsing="false" onAction="#editar" prefHeight="67.0" prefWidth="140.0" text="Editar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.33" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="347.0" layoutY="585.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="67.0" prefWidth="140.0" text="Eliminar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.29" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="715.0" layoutY="585.0" mnemonicParsing="false" prefHeight="67.0" prefWidth="140.0" text="Reporte">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection fraction="0.24" topOpacity="0.3" />
+         </effect>
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="54.0" layoutY="95.0" prefHeight="27.0" prefWidth="165.0" text="Codigo Empleado:">
+         <font>
+            <Font name="Bodoni MT" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="142.0" prefHeight="31.0" prefWidth="165.0" text="Numero Empleado:">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="194.0" prefHeight="27.0" prefWidth="182.0" text="Apellidos Empleado:" textFill="#eeeeee">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="235.0" prefHeight="31.0" prefWidth="182.0" text="Nombres Empleado:">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="431.0" layoutY="18.0" prefHeight="54.0" prefWidth="237.0" text="Empleados" textAlignment="CENTER" textFill="#686868">
+         <font>
+            <Font name="Garamond" size="46.0" />
+         </font>
+      </Label>
+      <Label layoutX="967.0" layoutY="652.0" opacity="0.86" prefHeight="27.0" prefWidth="103.0" style="-fx-text-fill: #000000;" text="Tony´s KINAL">
+         <font>
+            <Font name="Forte" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="426.0" layoutY="15.0" prefHeight="16.0" prefWidth="215.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#726e6e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="426.0" layoutY="64.0" prefHeight="16.0" prefWidth="215.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#726e6e" />
+         </effect>
+      </Separator>
+      <Separator layoutX="42.0" layoutY="118.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#979191" />
+         </effect>
+      </Separator>
+      <Separator layoutX="42.0" layoutY="165.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#979191" />
+         </effect>
+      </Separator>
+      <Separator layoutX="42.0" layoutY="216.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b2a3a3" />
+         </effect>
+      </Separator>
+      <Separator layoutX="655.0" layoutY="112.0" prefHeight="16.0" prefWidth="94.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <Button fx:id="idEmpleados" layoutX="13.0" layoutY="23.0" mnemonicParsing="false" onKeyReleased="#ventanaTipoEmpleados" onMouseClicked="#ventanaTipoEmpleados" prefHeight="27.0" prefWidth="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <Reflection bottomOpacity="0.11" fraction="0.35" topOpacity="0.15" />
+         </effect>
+         <font>
+            <Font name="Candara" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="idEmpresa" fitHeight="48.0" fitWidth="28.0" onKeyReleased="#ventanaTipoEmpleados" onMouseClicked="#ventanaTipoEmpleados" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../image/volver2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutX="45.0" layoutY="262.0" prefHeight="16.0" prefWidth="165.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <Label layoutX="655.0" layoutY="89.0" prefHeight="31.0" prefWidth="94.0" text="Dirección:">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombresEmpleado" editable="false" layoutX="224.0" layoutY="239.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b9a1a1" />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtGradoCocinero" editable="false" layoutX="773.0" layoutY="192.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b9a1a1" />
+         </effect>
+      </TextField>
+      <Label layoutX="668.0" layoutY="142.0" prefHeight="31.0" prefWidth="94.0" text="Teléfono:">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="613.0" layoutY="211.0" prefHeight="16.0" prefWidth="140.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <TextField fx:id="txtTelefono" editable="false" layoutX="773.0" layoutY="142.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <InnerShadow color="#b9a1a1" />
+         </effect>
+      </TextField>
+      <Label layoutX="612.0" layoutY="192.0" prefHeight="31.0" prefWidth="140.0" text="Grado Cocinero:">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="667.0" layoutY="161.0" prefHeight="16.0" prefWidth="85.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <Label layoutX="565.0" layoutY="237.0" prefHeight="27.0" prefWidth="197.0" text="Codigo TipoEmpleado:">
+         <font>
+            <Font name="Bodoni MT" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="566.0" layoutY="256.0" prefHeight="16.0" prefWidth="188.0" style="-fx-background-insets: #000000;">
+         <effect>
+            <InnerShadow color="#b5aaaa" />
+         </effect>
+      </Separator>
+      <ComboBox fx:id="cmbCodigoTipoEmpleado" layoutX="773.0" layoutY="235.0" prefHeight="31.0" prefWidth="297.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#f2ebeb" />
+               </light>
+            </Lighting>
+         </effect>
+      </ComboBox>
+   </children>
+   <effect>
+      <SepiaTone level="0.04" />
+   </effect>
+</AnchorPane>
